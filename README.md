@@ -51,15 +51,28 @@ The test suite includes:
 - Component tests
 - Database tests with seeded data
 
-To run tests:
+You can run tests in different ways:
 
 ```bash
+# Run all tests (default)
 npm test
+
+# Run all tests (explicit)
+npm run test:all
+
+# Run only database tests
+npm run test:database
+
+# Run only component tests
+npm run test:components
+
+# Run tests in watch mode
+npm run test:watch
 ```
 
 Tests will automatically:
 1. Seed the database with test data
-2. Run all tests
+2. Run the selected tests
 3. Clean up the database after tests
 
 ## Learn More

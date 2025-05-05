@@ -7,8 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "jest --testPathPattern=src/components/__tests__/",
+    "test:all": "jest",
+    "test:database": "jest --testPathPattern=src/components/__tests__/database.test.js",
+    "test:components": "jest --testPathPattern=src/components/__tests__/HelloWorld.test.js",
+    "test:watch": "jest --watch",
+    "seed": "node prisma/seed.js",
+    "postinstall": "prisma generate && prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^6.7.0",
