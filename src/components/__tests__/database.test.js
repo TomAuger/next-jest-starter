@@ -1,5 +1,10 @@
 const { PrismaClient } = require('../../generated/prisma');
+const { main: seed } = require('../../../prisma/seed');
 const prisma = new PrismaClient();
+
+beforeAll(async () => {
+  await seed();
+});
 
 describe('Database Seeding', () => {
   it('should have 10 users in the database', async () => {

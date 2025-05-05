@@ -70,10 +70,9 @@ npm run test:components
 npm run test:watch
 ```
 
-Tests will automatically:
-1. Seed the database with test data
-2. Run the selected tests
-3. Clean up the database after tests
+**Note:**  
+- Database seeding and cleanup only occur when running database tests (e.g., with `npm run test:database` or when database tests are included in the run).
+- Component tests do **not** seed or clean up the database, so they run faster and without side effects.
 
 ## Learn More
 
