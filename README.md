@@ -74,6 +74,8 @@ npm run test:watch
 - Database seeding and cleanup only occur when running database tests (e.g., with `npm run test:database` or when database tests are included in the run).
 - Component tests do **not** seed or clean up the database, so they run faster and without side effects.
 
+@TODO: currently all tests are being run regardless of filters
+
 ## Learn More
 
 To learn more about the technologies used:
