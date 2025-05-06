@@ -1,5 +1,5 @@
-const { PrismaClient } = require('../../generated/prisma');
-const { main: seed } = require('../../../prisma/seed');
+import { PrismaClient } from '../../generated/prisma';
+import { main as seed } from '../../../prisma/seed';
 const prisma = new PrismaClient();
 
 beforeAll(async () => {
